@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>io.github.thinkframework</groupId>
+    <artifactId>think-framework-bom</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+    <packaging>pom</packaging>
+
+    <properties>
+        <!-- Dependency versions -->
+        <spring-boot.version>2.3.11.RELEASE</spring-boot.version>
+        <spring-cloud.version>Hoxton.SR12</spring-cloud.version>
+        <spring-cloud-alibaba.version>2.2.6.RELEASE</spring-cloud-alibaba.version>
+        <problem-spring-web.version>0.26.2</problem-spring-web.version>
+        <spring-boot-admin-starter-server.version>2.3.1</spring-boot-admin-starter-server.version>
+        <mybatis-spring-boot-starter.version>2.1.4</mybatis-spring-boot-starter.version>
+        <druid-spring-boot-starter.version>1.2.6</druid-spring-boot-starter.version>
+        <redisson-spring-boot-starter.version>3.16.2</redisson-spring-boot-starter.version>
+        <lombok.version>1.18.20</lombok.version>
+        <mapstruct-jdk8.version>1.4.2.Final</mapstruct-jdk8.version>
+        <springfox-boot-starter.version>3.0.0</springfox-boot-starter.version>
+        <!-- Plugin versions -->
+        <mapstruct-processor.version>1.4.2.Final</mapstruct-processor.version>
+        <jacoco-maven-plugin.version>0.8.6</jacoco-maven-plugin.version>
+        <sonar-maven-plugin.version>3.8.0.2131</sonar-maven-plugin.version>
+    </properties>
+    <dependencyManagement>
+        <dependencies>
+            <!-- 一方库 -->
+            <dependency>
+                <groupId>com.hdhxby</groupId>
+                <artifactId>think-core</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.hdhxby</groupId>
+                <artifactId>thin-context</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.hdhxby</groupId>
+                <artifactId>think-test</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <!-- 三方库 -->
+            <dependency>
+                <groupId>com.alibaba.cloud</groupId>
+                <artifactId>spring-cloud-alibaba-dependencies</artifactId>
+                <version>${spring-cloud-alibaba.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+            <dependency>
+                <groupId>de.codecentric</groupId>
+                <artifactId>spring-boot-admin-starter-server</artifactId>
+                <version>${spring-boot-admin-starter-server.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.mybatis.spring.boot</groupId>
+                <artifactId>mybatis-spring-boot-starter</artifactId>
+                <version>${mybatis-spring-boot-starter.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.alibaba</groupId>
+                <artifactId>druid-spring-boot-starter</artifactId>
+                <version>${druid-spring-boot-starter.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.redisson</groupId>
+                <artifactId>redisson-spring-boot-starter</artifactId>
+                <version>${redisson-spring-boot-starter.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.springfox</groupId>
+                <artifactId>springfox-boot-starter</artifactId>
+                <version>${springfox-boot-starter.version}</version>
+                <scope>provided</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.projectlombok</groupId>
+                <artifactId>lombok</artifactId>
+                <version>${lombok.version}</version>
+                <scope>provided</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.mapstruct</groupId>
+                <artifactId>mapstruct</artifactId>
+                <version>${mapstruct-jdk8.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.zalando</groupId>
+                <artifactId>problem-spring-web-starter</artifactId>
+                <version>${problem-spring-web.version}</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+    <dependencies>
+        <!-- 三方库 -->
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <scope>provided</scope>
+        </dependency>
+    </dependencies>
+</project>
