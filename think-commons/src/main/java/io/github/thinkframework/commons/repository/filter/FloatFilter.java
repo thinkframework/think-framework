@@ -18,7 +18,6 @@
  */
 package io.github.thinkframework.commons.repository.filter;
 
-import java.time.Duration;
 import java.util.List;
 
 /**

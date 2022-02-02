@@ -1,9 +1,7 @@
 package io.github.thinkframework.commons.web.rest;
 
 import io.github.thinkframework.commons.service.dto.AbstractAuditingDTO;
-import org.springframework.data.domain.Sort;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.RequestParam;
 
 import java.util.List;
 
@@ -23,7 +21,7 @@ public interface CriteriaResource<DTO extends AbstractAuditingDTO<ID>, CRITERIA,
      *
      * Page和List都实现了Iterable接口
      * @see org.springframework.data.domain.Page
-     * @see java.util.List
+     * @see List
      * @param criteria
      * @return
      */

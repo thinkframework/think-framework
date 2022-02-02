@@ -1,11 +1,9 @@
 package io.github.thinkframework.commons.domain;
 
-import lombok.AllArgsConstructor;
 import lombok.NoArgsConstructor;
 import lombok.experimental.SuperBuilder;
 import org.springframework.data.annotation.*;
 
-import java.io.Serializable;
 import java.time.Instant;
 
 /**

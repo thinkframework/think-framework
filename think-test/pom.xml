@@ -12,6 +12,11 @@
     </parent>
 
     <artifactId>think-test</artifactId>
+    <packaging>jar</packaging>
+
+    <description>
+        一些bean操作的工具类和java基础包的代理类(监视方法调用)
+    </description>
 
     <dependencies>
         <dependency>

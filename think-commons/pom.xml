@@ -14,7 +14,16 @@
     <artifactId>think-commons</artifactId>
     <packaging>jar</packaging>
 
+    <description>
+        CRUD抽象
+        公共包
+    </description>
+
     <dependencies>
+        <dependency>
+            <groupId>io.github.thinkframework</groupId>
+            <artifactId>think-core</artifactId>
+        </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter</artifactId>

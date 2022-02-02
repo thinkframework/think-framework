@@ -1,25 +1,11 @@
 package io.github.thinkframework.commons.web.rest;
 
-import io.github.thinkframework.commons.domain.AbstractAuditingEntity;
-import io.github.thinkframework.commons.mapper.Mapper;
 import io.github.thinkframework.commons.repository.criteria.AbstractCriteria;
 import io.github.thinkframework.commons.service.CriteriaService;
 import io.github.thinkframework.commons.service.dto.AbstractAuditingDTO;
 import io.swagger.annotations.ApiOperation;
-import lombok.NonNull;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.domain.Page;
-import org.springframework.data.domain.PageRequest;
-import org.springframework.data.domain.Sort;
-import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.*;
-import org.springframework.web.server.ResponseStatusException;
-
-import java.util.List;
-import java.util.stream.Collectors;
+import org.springframework.web.bind.annotation.GetMapping;
 
 /**
  * 支持条件查询的资源

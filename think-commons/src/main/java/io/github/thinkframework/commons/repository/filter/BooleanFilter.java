@@ -18,7 +18,6 @@
  */
 package io.github.thinkframework.commons.repository.filter;
 
-import java.math.BigDecimal;
 import java.util.List;
 
 /**

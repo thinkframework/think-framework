@@ -19,7 +19,6 @@
 
 package io.github.thinkframework.commons.repository.filter;
 
-import java.time.Instant;
 import java.util.List;
 
 /**

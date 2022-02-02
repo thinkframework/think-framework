@@ -1,7 +1,5 @@
 package io.github.thinkframework.commons.web.rest;
 
-import io.github.thinkframework.commons.repository.criteria.AbstractCriteria;
-import io.github.thinkframework.commons.service.CriteriaService;
 import io.github.thinkframework.commons.service.CrudService;
 import io.github.thinkframework.commons.service.dto.AbstractAuditingDTO;
 import io.swagger.annotations.ApiOperation;

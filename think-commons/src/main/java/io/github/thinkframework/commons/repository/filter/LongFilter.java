@@ -19,7 +19,6 @@
 
 package io.github.thinkframework.commons.repository.filter;
 
-import java.time.LocalDate;
 import java.util.List;
 
 /**

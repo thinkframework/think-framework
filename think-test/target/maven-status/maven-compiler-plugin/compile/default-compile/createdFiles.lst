@@ -1,1 +1,5 @@
+io/github/thinkframework/test/io/ThinkWriter.class
+io/github/thinkframework/test/io/ThinkInpuStream.class
+io/github/thinkframework/test/io/ThinkReader.class
+io/github/thinkframework/test/io/ThinkOutputStream.class
 io/github/thinkframework/commons/prototype/AbstractAuditingPrototype.class

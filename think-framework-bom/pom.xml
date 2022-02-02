@@ -9,6 +9,13 @@
     <version>0.0.1-SNAPSHOT</version>
     <packaging>pom</packaging>
 
+    <description>
+        只包含一些:
+            spring-boot-dependencies
+            spring-cloud-dependencies
+        里没有的依赖
+    </description>
+
     <properties>
         <!-- Dependency versions -->
         <spring-boot.version>2.3.11.RELEASE</spring-boot.version>
@@ -31,17 +38,17 @@
         <dependencies>
             <!-- 一方库 -->
             <dependency>
-                <groupId>com.hdhxby</groupId>
+                <groupId>io.github.thinkframework</groupId>
                 <artifactId>think-core</artifactId>
                 <version>${project.version}</version>
             </dependency>
             <dependency>
-                <groupId>com.hdhxby</groupId>
+                <groupId>io.github.thinkframework</groupId>
                 <artifactId>thin-context</artifactId>
                 <version>${project.version}</version>
             </dependency>
             <dependency>
-                <groupId>com.hdhxby</groupId>
+                <groupId>io.github.thinkframework</groupId>
                 <artifactId>think-test</artifactId>
                 <version>${project.version}</version>
             </dependency>
@@ -97,12 +104,4 @@
             </dependency>
         </dependencies>
     </dependencyManagement>
-    <dependencies>
-        <!-- 三方库 -->
-        <dependency>
-            <groupId>org.projectlombok</groupId>
-            <artifactId>lombok</artifactId>
-            <scope>provided</scope>
-        </dependency>
-    </dependencies>
 </project>

@@ -24,7 +24,6 @@ import org.springframework.format.annotation.DateTimeFormat.ISO;
 
 import java.time.ZonedDateTime;
 import java.util.List;
-import java.util.UUID;
 
 /**
  * Filter class for {@link ZonedDateTime} type attributes.
