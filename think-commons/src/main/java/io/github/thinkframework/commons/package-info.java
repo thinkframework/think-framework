@@ -1,4 +1,4 @@
 /**
- * 权限
+ * CRUD
  */
 package io.github.thinkframework.commons;
