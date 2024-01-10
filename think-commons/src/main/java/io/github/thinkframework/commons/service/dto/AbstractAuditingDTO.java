@@ -3,7 +3,7 @@ package io.github.thinkframework.commons.service.dto;
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.NoArgsConstructor;
 import lombok.experimental.SuperBuilder;
 
@@ -27,25 +27,25 @@ public abstract class AbstractAuditingDTO<ID> implements DTO {
      * 解决postman精度丢失的问题
      */
     @JsonFormat(shape = JsonFormat.Shape.STRING)
-    @ApiModelProperty(value = "ID")
+    @Schema(description = "ID")
     private ID id;
 
-    @ApiModelProperty(value = "创建人")
+    @Schema(description = "创建人")
     @JsonIgnoreProperties
     @JsonIgnore
     private ID createdBy;
 
-    @ApiModelProperty(value = "创建时间")
+    @Schema(description = "创建时间")
     @JsonIgnoreProperties
     @JsonIgnore
     private Instant createdDate;
 
-    @ApiModelProperty(value = "最后修改人")
+    @Schema(description = "最后修改人")
     @JsonIgnoreProperties
     @JsonIgnore
     private ID lastModifiedBy;
 
-    @ApiModelProperty(value = "最后修改时间")
+    @Schema(description = "最后修改时间")
     @JsonIgnoreProperties
     @JsonIgnore
     private Instant lastModifiedDate;

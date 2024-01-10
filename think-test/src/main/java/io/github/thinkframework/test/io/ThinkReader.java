@@ -58,10 +58,10 @@ public class ThinkReader extends Reader implements Readable, Closeable {
         reader.reset();
     }
 
-    @Override
-    public long transferTo(Writer out) throws IOException {
-        return reader.transferTo(out);
-    }
+//    @Override
+//    public long transferTo(Writer out) throws IOException {
+//        return reader.transferTo(out);
+//    }
 
     @Override
     public int read(char[] cbuf, int off, int len) throws IOException {

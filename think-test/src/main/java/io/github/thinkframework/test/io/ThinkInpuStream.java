@@ -30,20 +30,20 @@ public class ThinkInpuStream extends InputStream implements Closeable {
         return inputStream.read(b, off, len);
     }
 
-    @Override
-    public byte[] readAllBytes() throws IOException {
-        return inputStream.readAllBytes();
-    }
-
-    @Override
-    public byte[] readNBytes(int len) throws IOException {
-        return inputStream.readNBytes(len);
-    }
-
-    @Override
-    public int readNBytes(byte[] b, int off, int len) throws IOException {
-        return inputStream.readNBytes(b, off, len);
-    }
+//    @Override
+//    public byte[] readAllBytes() throws IOException {
+//        return inputStream.readAllBytes();
+//    }
+//
+//    @Override
+//    public byte[] readNBytes(int len) throws IOException {
+//        return inputStream.readNBytes(len);
+//    }
+//
+//    @Override
+//    public int readNBytes(byte[] b, int off, int len) throws IOException {
+//        return inputStream.readNBytes(b, off, len);
+//    }
 
     @Override
     public long skip(long n) throws IOException {
@@ -80,10 +80,10 @@ public class ThinkInpuStream extends InputStream implements Closeable {
         return inputStream.markSupported();
     }
 
-    @Override
-    public long transferTo(OutputStream out) throws IOException {
-        return inputStream.transferTo(out);
-    }
+//    @Override
+//    public long transferTo(OutputStream out) throws IOException {
+//        return inputStream.transferTo(out);
+//    }
 
     @Override
     public int read() throws IOException {

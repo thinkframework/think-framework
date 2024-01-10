@@ -2,7 +2,7 @@ package io.github.thinkframework.commons.web.rest;
 
 import io.github.thinkframework.commons.service.CrudService;
 import io.github.thinkframework.commons.service.dto.AbstractAuditingDTO;
-import io.swagger.annotations.ApiOperation;
+import io.swagger.v3.oas.annotations.Operation;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -35,8 +35,6 @@ public abstract class AbstractCrudRestResource<SERVICE extends CrudService<DTO, 
      * @param dto 数据传输对象
      * @return
      */
-    @ApiOperation("创建")
-    @PostMapping
     @Override
 //    @Validated(AbstractAuditingDTO.CREATED.class)
     public ResponseEntity<DTO> create(@RequestBody DTO dto) {
@@ -48,7 +46,6 @@ public abstract class AbstractCrudRestResource<SERVICE extends CrudService<DTO, 
      * @param dto 数据传输对象
      * @return
      */
-    @ApiOperation("更新")
     @PutMapping("{id}")
     @Override
 //    @Validated(AbstractAuditingDTO.UPDATE.class)
@@ -63,7 +60,6 @@ public abstract class AbstractCrudRestResource<SERVICE extends CrudService<DTO, 
      * @param dto 数据传输对象
      * @return
      */
-    @ApiOperation("局部更新")
     @PatchMapping("{id}")
     @Override
 //    @Validated(AbstractAuditingDTO.UPDATE.class)
@@ -77,7 +73,6 @@ public abstract class AbstractCrudRestResource<SERVICE extends CrudService<DTO, 
      * @param id id
      * @return
      */
-    @ApiOperation("获取明细")
     @GetMapping("{id}")
     @Override
     public ResponseEntity<DTO> findById(@PathVariable ID id) {
@@ -91,7 +86,6 @@ public abstract class AbstractCrudRestResource<SERVICE extends CrudService<DTO, 
      * @param id id
      * @return
      */
-    @ApiOperation("删除")
     @DeleteMapping("{id}")
     @Override
     public ResponseEntity<Void> deleteById(@PathVariable ID id) {

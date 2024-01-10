@@ -9,6 +9,7 @@
         <groupId>org.sonatype.oss</groupId>
         <artifactId>oss-parent</artifactId>
         <version>9</version>
+        <relativePath/>
     </parent>
 
     <groupId>io.github.thinkframework</groupId>
@@ -33,6 +34,8 @@
         <lombok.version>1.18.20</lombok.version>
         <mapstruct-jdk8.version>1.4.2.Final</mapstruct-jdk8.version>
         <springfox-boot-starter.version>3.0.0</springfox-boot-starter.version>
+        <swagger.version>2.2.9</swagger.version>
+        <knife4j.version>4.3.0</knife4j.version>
         <!-- Plugin versions -->
         <mapstruct-processor.version>1.4.2.Final</mapstruct-processor.version>
         <jacoco-maven-plugin.version>0.8.6</jacoco-maven-plugin.version>
@@ -54,6 +57,11 @@
             <dependency>
                 <groupId>io.github.thinkframework</groupId>
                 <artifactId>think-commons</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.github.thinkframework</groupId>
+                <artifactId>think-jdbc</artifactId>
                 <version>${project.version}</version>
             </dependency>
             <dependency>
@@ -86,7 +94,16 @@
                 <groupId>io.springfox</groupId>
                 <artifactId>springfox-boot-starter</artifactId>
                 <version>${springfox-boot-starter.version}</version>
-                <scope>provided</scope>
+            </dependency>
+            <dependency>
+                <groupId>io.swagger.core.v3</groupId>
+                <artifactId>swagger-annotations</artifactId>
+                <version>${swagger.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.github.xiaoymin</groupId>
+                <artifactId>knife4j-gateway-spring-boot-starter</artifactId>
+                <version>${knife4j.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.mapstruct</groupId>
