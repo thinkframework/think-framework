@@ -3,7 +3,6 @@ package io.github.thinkframework.commons.web.rest;
 import io.github.thinkframework.commons.repository.criteria.AbstractCriteria;
 import io.github.thinkframework.commons.service.CriteriaService;
 import io.github.thinkframework.commons.service.dto.AbstractAuditingDTO;
-import io.swagger.annotations.ApiOperation;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 
@@ -27,7 +26,6 @@ public abstract class AbstractRestResource<SERVICE extends CriteriaService<DTO,C
      * @param criteria id
      * @return 迭代器
      */
-    @ApiOperation("获取列表")
     @GetMapping
     @Override
     public ResponseEntity<Iterable<DTO>> findAll(CRITERIA criteria) {

@@ -13,14 +13,53 @@ public abstract class AbstractAuditingPrototype {
 
     private static final long serialVersionUID = 1L;
 
-    private Long id;
+    protected Long id;
 
-    private Long createdBy;
+    protected Long createdBy;
 
-    private Instant createdDate;// = Instant.now();
+    protected Instant createdDate;// = Instant.now();
 
-    private Long lastModifiedBy;
+    protected Long lastModifiedBy;
 
-    private Instant lastModifiedDate;// = Instant.now();
+    protected Instant lastModifiedDate;// = Instant.now();
 
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public Long getCreatedBy() {
+        return createdBy;
+    }
+
+    public void setCreatedBy(Long createdBy) {
+        this.createdBy = createdBy;
+    }
+
+    public Instant getCreatedDate() {
+        return createdDate;
+    }
+
+    public void setCreatedDate(Instant createdDate) {
+        this.createdDate = createdDate;
+    }
+
+    public Long getLastModifiedBy() {
+        return lastModifiedBy;
+    }
+
+    public void setLastModifiedBy(Long lastModifiedBy) {
+        this.lastModifiedBy = lastModifiedBy;
+    }
+
+    public Instant getLastModifiedDate() {
+        return lastModifiedDate;
+    }
+
+    public void setLastModifiedDate(Instant lastModifiedDate) {
+        this.lastModifiedDate = lastModifiedDate;
+    }
 }

@@ -11,14 +11,19 @@
         <relativePath>../pom.xml</relativePath>
     </parent>
 
-    <artifactId>think-core</artifactId>
+    <artifactId>think-jdbc</artifactId>
     <packaging>jar</packaging>
 
     <description>
-        业务逻辑用到的类
+        CRUD抽象
+        公共包
     </description>
 
     <dependencies>
+        <dependency>
+            <groupId>io.github.thinkframework</groupId>
+            <artifactId>think-core</artifactId>
+        </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter</artifactId>
@@ -41,8 +46,8 @@
             <artifactId>spring-boot-starter-actuator</artifactId>
         </dependency>
         <dependency>
-            <groupId>com.github.xiaoymin</groupId>
-            <artifactId>knife4j-gateway-spring-boot-starter</artifactId>
+            <groupId>io.springfox</groupId>
+            <artifactId>springfox-boot-starter</artifactId>
             <scope>provided</scope>
         </dependency>
         <dependency>
@@ -84,7 +89,6 @@
             <artifactId>lombok</artifactId>
             <scope>provided</scope>
         </dependency>
-
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>

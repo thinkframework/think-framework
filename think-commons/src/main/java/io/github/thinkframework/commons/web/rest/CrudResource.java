@@ -1,7 +1,7 @@
 package io.github.thinkframework.commons.web.rest;
 
 import io.github.thinkframework.commons.service.dto.AbstractAuditingDTO;
-import io.swagger.annotations.ApiOperation;
+import io.swagger.v3.oas.annotations.Operation;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -21,6 +21,7 @@ public interface CrudResource<DTO extends AbstractAuditingDTO<ID>, ID> {
      * @param dto 数据传输对象
      * @return
      */
+    @Operation(summary = "create", description = "创建")
     @PostMapping
     ResponseEntity<DTO> create(@RequestBody DTO dto);
 
@@ -31,6 +32,7 @@ public interface CrudResource<DTO extends AbstractAuditingDTO<ID>, ID> {
      * @param dto 数据传输对象
      * @return
      */
+    @Operation(summary = "update", description = "更新")
     @PutMapping("{id}")
     ResponseEntity<DTO> update(@PathVariable(name = "id") ID id, @RequestBody DTO dto);
 
@@ -42,6 +44,7 @@ public interface CrudResource<DTO extends AbstractAuditingDTO<ID>, ID> {
      * @param dto 数据传输对象
      * @return
      */
+    @Operation(summary = "partialUpdate", description = "局部更新")
     @PatchMapping("{id}")
     ResponseEntity<DTO> partialUpdate(@PathVariable(name = "id") ID id, @RequestBody DTO dto);
 
@@ -52,6 +55,7 @@ public interface CrudResource<DTO extends AbstractAuditingDTO<ID>, ID> {
      * @param id id
      * @return
      */
+    @Operation(summary = "findById", description = "查找")
     @GetMapping("{id}")
     ResponseEntity<DTO> findById(@PathVariable(name = "id") ID id);
 
@@ -61,7 +65,7 @@ public interface CrudResource<DTO extends AbstractAuditingDTO<ID>, ID> {
      * @param id id
      * @return
      */
-    @ApiOperation("删除")
+    @Operation(summary = "deleteById", description = "删除")
     @DeleteMapping("{id}")
     ResponseEntity<Void> deleteById(@PathVariable(name = "id") ID id);
 }
